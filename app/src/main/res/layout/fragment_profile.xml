@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#e0e0e0"
+    android:layout_height="match_parent">
+
+<include layout="@layout/toolbar"/>
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/imageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="55dp"
+        app:auto_cycle="true"
+        app:delay="0"
+        app:error_image="@drawable/whiteslide"
+        app:period="2000"
+        app:placeholder="@drawable/whiteslide" />
+
+
+    <FrameLayout
+        android:id="@+id/fragment_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/profile_textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:textColor="@color/primary_dark"
+        android:fontFamily="@font/edo"
+        android:text="Profile Fragment" />
+</RelativeLayout>
