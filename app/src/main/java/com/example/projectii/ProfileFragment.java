@@ -13,6 +13,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 
 import java.util.ArrayList;
@@ -35,12 +36,12 @@ public class ProfileFragment extends Fragment {
 
         List<SlideModel> slides= new ArrayList<>();
 
-        slides.add(new SlideModel(R.drawable.mixblue,"Qachi"));
-        slides.add(new SlideModel(R.drawable.whiteslide,"Kachi"));
-        slides.add(new SlideModel(R.drawable.mixgreen,"Afone"));
-        slides.add(new SlideModel(R.drawable.black,"Ejike"));
+        slides.add(new SlideModel(R.drawable.mixblue,"Qachi", ScaleTypes.FIT));
+        slides.add(new SlideModel(R.drawable.whiteslide,"Kachi",ScaleTypes.FIT));
+        slides.add(new SlideModel(R.drawable.mixgreen,"Afone",ScaleTypes.FIT));
+        slides.add(new SlideModel(R.drawable.black,"Ejike",ScaleTypes.FIT));
 
-        imageSlider.setImageList(slides,false);
+        imageSlider.setImageList(slides,ScaleTypes.FIT);
 
 
         toolbar =view.findViewById(R.id.toolbar);

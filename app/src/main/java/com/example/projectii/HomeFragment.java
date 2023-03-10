@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 
 import java.util.ArrayList;
@@ -36,12 +37,12 @@ public class HomeFragment extends Fragment {
 
         List<SlideModel> slides = new ArrayList<>();
 
-        slides.add(new SlideModel(R.drawable.whiteslide,"Qachi"));
-        slides.add(new SlideModel(R.drawable.mixgreen,"Kachi"));
-        slides.add(new SlideModel(R.drawable.mixblack,"Afone"));
-        slides.add(new SlideModel(R.drawable.mixblue,"Ejike"));
+        slides.add(new SlideModel(R.drawable.whiteslide,"Qachi", ScaleTypes.FIT));
+        slides.add(new SlideModel(R.drawable.mixgreen,"Kachi",ScaleTypes.FIT));
+        slides.add(new SlideModel(R.drawable.mixblack,"Afone",ScaleTypes.FIT));
+        slides.add(new SlideModel(R.drawable.mixblue,"Ejike",ScaleTypes.FIT));
 
-        imageSlider.setImageList(slides, false);
+        imageSlider.setImageList(slides, ScaleTypes.FIT);
 
         tickets = view.findViewById(R.id.tickets);
         expolre = view.findViewById(R.id.explore);
