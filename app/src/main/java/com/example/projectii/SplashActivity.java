@@ -9,12 +9,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 public class SplashActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT=5000;
     private TextView text_Splash;
     private ImageView splash;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,12 +20,9 @@ public class SplashActivity extends AppCompatActivity {
 
         text_Splash = (TextView)findViewById(R.id.text_Splash);
         splash = (ImageView) findViewById(R.id.splash);
-
         Animation animation = AnimationUtils.loadAnimation(this,R.anim.animation);
         text_Splash.startAnimation(animation);
         splash.startAnimation(animation);
-
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -36,6 +31,5 @@ public class SplashActivity extends AppCompatActivity {
                 finish();
             }
         },SPLASH_TIME_OUT);
-
     }
 }

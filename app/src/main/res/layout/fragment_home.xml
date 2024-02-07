@@ -16,11 +16,11 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="55dp"
-        app:auto_cycle="true"
-        app:delay="0"
-        app:error_image="@drawable/whiteslide"
-        app:period="2000"
-        app:placeholder="@drawable/whiteslide" />
+        app:iss_auto_cycle="true"
+        app:iss_delay="0"
+        app:iss_error_image="@drawable/whiteslide"
+        app:iss_period="2000"
+        app:iss_placeholder="@drawable/whiteslide" />
 
     <FrameLayout
         android:id="@+id/fragment_blank"
